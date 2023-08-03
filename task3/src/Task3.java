@@ -68,7 +68,7 @@ public class Task3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			fillReport();
+			fillReport(args[0], args[1]);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -81,7 +81,7 @@ public class Task3 {
 		}
 	}
 	
-	private static void fillReport() throws JsonParseException, IOException{
+	private static void fillReport(String testsFileName, String valuesFileName) throws JsonParseException, IOException{
 		Gson g = new Gson();
 		Tests tests = g.fromJson(new FileReader(testsFileName), Tests.class);
 		//ArrayList<Value> values = g.fromJson(new FileReader(valuesFileName), ArrayList<Value>.class);
