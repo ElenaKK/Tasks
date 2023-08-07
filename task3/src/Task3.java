@@ -87,7 +87,7 @@ public class Task3 {
 		//ArrayList<Value> values = g.fromJson(new FileReader(valuesFileName), ArrayList<Value>.class);
 		
 		Gson gson = new Gson();
-		Values values = g.fromJson(new FileReader(valuesFileName), Values.class);
+		Values values = gson.fromJson(new FileReader(valuesFileName), Values.class);
 		
 		tests.fillValues(values.listToMap());
 		
